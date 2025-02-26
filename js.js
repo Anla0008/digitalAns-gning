@@ -1,18 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const text = "Frontend developer"; // Teksten der skal skrives
-  let index = 0;
+  const words = ["Frontend developer", "UX/UI Designer", "Web developer"]; // Liste med ord
+  let wordIndex = 0; // Index for at holde styr på det nuværende ord
+  let index = 0; // Index for at holde styr på den nuværende position i ordet
   const speed = 100; // Hastighed i millisekunder
   const h4 = document.getElementById("typewriter");
 
   // Typewriter-effekten
   function typeWriterEffect() {
-    if (index < text.length) {
-      h4.textContent += text.charAt(index);
+    const currentWord = words[wordIndex]; // Hent det nuværende ord
+    if (index < currentWord.length) {
+      h4.textContent += currentWord.charAt(index);
       index++;
       setTimeout(typeWriterEffect, speed);
     } else {
-      // Når typewriter-effekten er færdig, vent 20 sekunder og slet teksten
-      setTimeout(deleteText, 20000); // 20 sekunder = 20000 millisekunder
+      // Når typewriter-effekten er færdig, vent 3 sekunder og slet teksten
+      setTimeout(deleteText, 3000); // 3 sekunder = 3000 millisekunder
     }
   }
 
@@ -27,11 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (deleteIndex >= 0) {
         setTimeout(deleteCharacter, speed);
       } else {
-        // Når teksten er slettet, start typewriter-effekten igen
-        setTimeout(function () {
-          index = 0; // Nulstil index
-          typeWriterEffect(); // Start typewriter-effekten igen
-        }, 1000); // Vent 1 sekund før den starter forfra
+        // Når teksten er slettet, skift til næste ord og start typewriter-effekten igen
+        wordIndex = (wordIndex + 1) % words.length; // Skift ord (cyklisk)
+        index = 0; // Nulstil index
+        setTimeout(typeWriterEffect, 1000); // Vent 1 sekund før den starter med det næste ord
       }
     }
 

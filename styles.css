@@ -22,7 +22,8 @@ hr {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "Lora", serif; /* Brug Lora for overskrifter */
   margin-bottom: 0.5rem;
   line-height: 1.2;
@@ -266,6 +267,7 @@ header {
   border-radius: 5px;
   font-size: 14px;
   transition: background 0.3s ease-in-out;
+  font-family: "Hind Madurai", sans-serif;
 }
 
 .project a:hover {
@@ -380,5 +382,27 @@ header {
 
   .next {
     right: 10px; /* Juster positionen af højre pil */
+  }
+
+  .intro h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+  .bagOmGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+  }
+
+  .bagOmGrid h4 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    text-align: center;
+  }
+  .bagOmGrid p {
+    max-width: 65ch;
+    margin: 0 auto;
+    text-align: justify;
   }
 }
