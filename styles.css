@@ -49,6 +49,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 22px;
 }
 /* Billeder */
 .projekter img {
@@ -315,6 +316,12 @@ header {
   pointer-events: none;
 }
 
+.intro h2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
 /* Footer styles */
 .footer-container {
   flex-direction: column; /* Skift til vertikal retning */
@@ -347,7 +354,13 @@ header {
 }
 
 /* Desktop Version*/
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+  .mineProjekter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+  }
   .slider-container {
     max-width: 1000px;
     position: relative; /* Sørger for, at containeren er forælder til absolut positionerede elementer */
@@ -392,8 +405,9 @@ header {
 
   .intro h2 {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 35px;
   }
   .bagOmGrid {
     display: grid;
@@ -410,5 +424,206 @@ header {
     max-width: 65ch;
     margin: 0 auto;
     text-align: justify;
+  }
+}
+
+/* Tablet Version */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Justering af mine projekter */
+  .mineProjekter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 26px; /* Justeret størrelse */
+  }
+
+  /* Slider container */
+  .slider-container {
+    max-width: 90%; /* Mindre marginer på tablet */
+    position: relative;
+  }
+
+  .project-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  /* Projektkort */
+  .project {
+    flex: 0 0 50%; /* To projekter per række på tablet */
+    max-width: 50%;
+  }
+
+  /* Tekst justering for intro */
+  .intro h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
+  /* Hero sektion justering */
+  .hero h1 {
+    font-size: 30px; /* Større skrifttype for tablet */
+  }
+
+  .hero h4 {
+    font-size: 24px; /* Mindre størrelse */
+  }
+
+  .hero p {
+    font-size: 16px; /* Justeret tekststørrelse */
+  }
+
+  /* Skilles sektion */
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* To kolonner på tablet */
+    gap: 20px;
+  }
+
+  .skills div {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  /* Justering af knapper */
+  .prev,
+  .next {
+    padding: 10px;
+    font-size: 18px; /* Mindre størrelse på knapperne */
+  }
+
+  /* Justering af footer */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info p {
+    font-size: 18px;
+  }
+
+  .bagOmGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* To kolonner */
+    gap: 20px; /* Mellemrum mellem kolonnerne */
+    margin-bottom: 20px;
+  }
+
+  .bagOmGrid h4 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .bagOmGrid p {
+    max-width: 65ch; /* Maksimal bredde på tekst */
+    margin: 0 auto;
+    text-align: justify;
+    padding: 12px;
+  }
+}
+
+/* Mid-size skærme (1024px - 1200px) */
+@media (min-width: 1024px) and (max-width: 1200px) {
+  /* Mine projekter */
+  .mineProjekter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 26px; /* Justeret størrelse */
+  }
+
+  /* Slider container */
+  .slider-container {
+    max-width: 90%; /* Mindre marginer på tablet og mid-size skærme */
+    position: relative;
+  }
+
+  .project-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  /* Projektkort */
+  .project {
+    flex: 0 0 50%; /* To projekter per række */
+    max-width: 50%;
+  }
+
+  /* Tekstjustering for intro */
+  .intro h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
+  /* Hero sektion justering */
+  .hero h1 {
+    font-size: 30px; /* Større skrifttype for mid-size skærme */
+  }
+
+  .hero h4 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px; /* Justeret tekststørrelse */
+  }
+
+  /* Skilles sektion */
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* To kolonner på mid-size skærme */
+    gap: 20px;
+  }
+
+  .skills div {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  /* Justering af knapper */
+  .prev,
+  .next {
+    padding: 10px;
+    font-size: 18px; /* Mindre størrelse på knapperne */
+  }
+
+  /* Justering af footer */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info p {
+    font-size: 18px;
+  }
+
+  /* BagOmGrid justering */
+  .bagOmGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* To kolonner */
+    gap: 20px; /* Mellemrum mellem kolonnerne */
+    margin-bottom: 20px;
+  }
+
+  .bagOmGrid h4 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .bagOmGrid p {
+    max-width: 65ch; /* Maksimal bredde på tekst */
+    margin: 0 auto;
+    text-align: justify;
+    padding: 12px;
   }
 }
