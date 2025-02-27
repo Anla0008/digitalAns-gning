@@ -52,6 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Slider
+
 const slider = document.querySelector(".project-slider");
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");

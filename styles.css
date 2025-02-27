@@ -13,7 +13,7 @@ body {
   font-size: 16px;
   line-height: 1.4;
   padding: 1rem;
-  background-color: #f8f9fa;
+  background-color: white;
 }
 
 hr {
@@ -45,6 +45,11 @@ a {
 }
 /* Generelt slut */
 
+.mineProjekter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* Billeder */
 .projekter img {
   width: 100%;
@@ -111,6 +116,7 @@ a {
 /* Typewriter effekt slut */
 
 /* Pil ned animation*/
+
 header {
   position: relative;
 }
