@@ -27,6 +27,11 @@ h4 {
   font-family: "Lora", serif; /* Brug Lora for overskrifter */
   margin-bottom: 0.5rem;
   line-height: 1.2;
+  font-weight: lighter;
+}
+h4 {
+  font-size: 20px;
+  font-weight: 400;
 }
 
 p {
@@ -71,7 +76,7 @@ a {
   border-radius: 50%;
   width: 250px;
   height: 250px;
-  border: 5px solid #ef709d;
+  border: 5px solid #941e43;
 }
 
 .hero h1 {
@@ -120,6 +125,7 @@ a {
 
 header {
   position: relative;
+  width: 100%;
 }
 
 .pilNed {
@@ -155,7 +161,7 @@ header {
 .container {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  background-color: #ef709d; /* Baggrundsfarven */
+  background-color: #941e43; /* Baggrundsfarven */
 }
 
 .skills {
@@ -167,7 +173,7 @@ header {
 
 /* Styling for hvert enkelt område */
 .skills div {
-  background-color: #f8f9fa;
+  background-color: white;
   padding: 20px;
   border-radius: 8px;
 }
@@ -268,7 +274,7 @@ header {
 .project a {
   display: inline-block;
   text-decoration: none;
-  background: #ef709d;
+  background: #941e43;
   color: white;
   padding: 6px 12px;
   border-radius: 5px;
@@ -278,7 +284,7 @@ header {
 }
 
 .project a:hover {
-  background: #bf597d;
+  background: #63122c;
 }
 
 /* Pile */
